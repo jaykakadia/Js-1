@@ -12,13 +12,17 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 // Input: flowerbed = [1,0,0,0,1], n = 2
 // Output: false
 
+let arr=[1,0,0,0,1];
+let n=2;
+console.log(canPlaceFlowers(arr, n));
+
 function canPlaceFlowers(arr, n) {
   if (n == 0) return true;
     if (n === 0) return true;
 
   if (arr[0] == 0 && arr[1] == 0) {
     n--;
-    arr[0] = 1;
+    arr[0] = 1;   
   }
   if (n == 0) return true;
 
