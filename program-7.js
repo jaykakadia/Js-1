@@ -26,12 +26,16 @@ console.log(removeDuplicateObjects(arr));
 
 function removeDuplicateObjects(arr) {
     const seen = new Set();
-    return arr.filter((obj) => {
-    const key = obj.title + "|" + obj.author;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-    });
+    const uniqueArr = [];
+
+    for (const obj of arr) {
+        const key = JSON.stringify(obj);
+        if (!seen.has(key)) {
+            seen.add(key);
+            uniqueArr.push(obj);
+        }
+    }
+    return uniqueArr;
 }
 
 

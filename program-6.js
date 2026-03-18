@@ -9,8 +9,19 @@ arr1 = [1, 2, 3, 4, 5, 6];
 arr2 = [3, 4, 5, 7];
 
 function merge(arr1, arr2){
-    let merged = [...arr1, ...arr2];
-    let unique = [...new Set(merged)];
-    return unique;
+    let newarr = []
+    for (let i = 0; i < arr1.length; i++){
+        newarr.push(arr1[i]);
+    }
+    for (let i = 0; i < arr2.length; i++){
+        newarr.push(arr2[i]);
+    }
+    newarr.sort();
+    let unique_set = new Set(newarr);
+    let unique_arr = []
+    for (let i of unique_set){
+        unique_arr.push(i);
+    }
+    return unique_arr;
 }
 console.log(merge(arr1, arr2));

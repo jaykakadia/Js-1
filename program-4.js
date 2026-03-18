@@ -6,9 +6,15 @@
 
 // Expected output: [1, 2, 3, 4, 5]
 function merge(arr1, arr2){
-    let merged = arr1.concat(arr2);
-    merged.sort();
-    return merged;
+    let newarr = []
+    for (let i = 0; i < arr1.length; i++){
+        newarr.push(arr1[i]);
+    }
+    for (let i = 0; i < arr2.length; i++){
+        newarr.push(arr2[i]);
+    }
+    newarr.sort();
+    return newarr;
 }
 
 let arr1 = [3, 5, 1];
