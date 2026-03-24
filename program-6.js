@@ -16,7 +16,7 @@ function merge(arr1, arr2){
     for (let i = 0; i < arr2.length; i++){
         newarr.push(arr2[i]);
     }
-    newarr.sort();
+    newarr.sort((a,b) => a-b);
     let unique_set = new Set(newarr);
     let unique_arr = []
     for (let i of unique_set){

@@ -32,7 +32,10 @@ function flatArray(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
-      result = result.concat(flatArray(arr[i]));
+      let temp = flatArray(arr[i]);
+      for (let j = 0; j < temp.length; j++) {
+        result.push(temp[j]);
+      }
     } else {
       result.push(arr[i]);
     }

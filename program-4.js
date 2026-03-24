@@ -13,7 +13,7 @@ function merge(arr1, arr2){
     for (let i = 0; i < arr2.length; i++){
         newarr.push(arr2[i]);
     }
-    newarr.sort();
+    newarr.sort((a, b) => a - b);
     return newarr;
 }
 
