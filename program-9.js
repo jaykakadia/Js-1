@@ -19,5 +19,5 @@ function findMostFrequent(arr) {
             mostFrequentItem = item;
         }
     }
-    return { item: mostFrequentItem, frequency: maxFrequency };
+    return { item: mostFrequentItem, frequency: `${maxFrequency} times` };
 }

@@ -3,7 +3,7 @@
 // Sample input: 025468
 // Expected output: 0-254-6-8.
 
-let input = "025468" ;
+let input = "025468";
 console.log(insertDashes(input));
 
 function insertDashes(input) {

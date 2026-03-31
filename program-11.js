@@ -9,9 +9,14 @@
 let arr1 = [1, 2, 3];
 let arr2 = [100, 2, 1, 10];
 
-function union(arr1, arr2){
-    let merged = [...arr1, ...arr2];
-    let unique = [...new Set(merged)];
-    return unique;
+function merge(arr1, arr2) {
+  let newarr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (!newarr.includes(arr1[i])) newarr.push(arr1[i]);
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    if (!newarr.includes(arr2[i])) newarr.push(arr2[i]);
+  }
+  return newarr.sort((a,b) => a-b);
 }
-console.log(union(arr1, arr2));
+console.log(merge(arr1, arr2));

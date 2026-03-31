@@ -17,6 +17,6 @@ function merge(arr1, arr2){
     return newarr;
 }
 
-let arr1 = [3, 5, 1];
+let arr1 = [];
 let arr2 = [4, 2];
 console.log(merge(arr1, arr2));

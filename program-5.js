@@ -12,32 +12,32 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 // Input: flowerbed = [1,0,0,0,1], n = 2
 // Output: false
 
-let arr=[1,0,0,0,1];
-let n=2;
+let arr=[0,1,0,0,0,1];
+let n=1;
 console.log(canPlaceFlowers(arr, n));
 
 function canPlaceFlowers(arr, n) {
-  if (n == 0) return true;
+  
     if (n === 0) return true;
 
-  if (arr[0] == 0 && arr[1] == 0) {
+  if (arr[0] === 0 && arr[1] === 0) {
     n--;
     arr[0] = 1;   
   }
-  if (n == 0) return true;
+  if (n === 0) return true;
 
   for (let i = 1; i < arr.length - 1; i++) {
     if (check(i, arr)) {
       n--;
       arr[i] = 1;
-      if (n == 0) return true;
+      if (n === 0) return true;
     }
   }
-  if (arr[arr.length - 1] == 0 && arr[arr.length - 2] == 0) n--;
-  if (n == 0) return true;
+  if (arr[arr.length - 1] === 0 && arr[arr.length - 2] === 0) n--;
+  if (n === 0) return true;
   return false;
 }
 function check(i, arr) {
-  if (arr[i - 1] == 0 && arr[i] == 0 && arr[i + 1] == 0) return true;
+  if (arr[i - 1] === 0 && arr[i] === 0 && arr[i + 1] === 0) return true;
   return false;
 }

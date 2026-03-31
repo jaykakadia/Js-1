@@ -5,23 +5,29 @@
 // arr2 = [3, 4, 5, 7];
 
 // Expected output: [1, 2, 3, 4, 5, 6, 7]
-arr1 = [1, 2, 3, 4, 5, 6];
-arr2 = [3, 4, 5, 7];
-
-function merge(arr1, arr2){
-    let newarr = []
-    for (let i = 0; i < arr1.length; i++){
-        newarr.push(arr1[i]);
+// solve using include .....
+arr1 = [1, 7, 2, 3, 4, 5, 6];
+arr2 = [3, 4, 5, 7, 8, 6, 1];
+function merge(arr1, arr2) {
+  let newarr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (!newarr.includes(arr1[i])) {
+      newarr.push(arr1[i]);
     }
-    for (let i = 0; i < arr2.length; i++){
-        newarr.push(arr2[i]);
-    }
-    newarr.sort((a,b) => a-b);
-    let unique_set = new Set(newarr);
-    let unique_arr = []
-    for (let i of unique_set){
-        unique_arr.push(i);
-    }
-    return unique_arr;
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    if (!newarr.includes(arr2[i])) newarr.push(arr2[i]);
+  }
+  // for (let i = 0; i < newarr.length; i++ ){
+  //     let curr = newarr[i];
+  //     for(let j = i+1; j < newarr.length; j++ ){
+  //         if (newarr[j]===curr){
+  //             newarr.splice(j, 1);
+  //             j--;
+  //         }
+  //     }
+  // }
+  // witout using set
+  return newarr;
 }
 console.log(merge(arr1, arr2));

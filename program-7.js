@@ -25,14 +25,14 @@ let arr = [
 console.log(removeDuplicateObjects(arr));
 
 function removeDuplicateObjects(arr) {
-    const seen = new Set();
+    const seen = [];
     const uniqueArr = [];
 
-    for (const obj of arr) {
-        const key = JSON.stringify(obj);
-        if (!seen.has(key)) {
-            seen.add(key);
-            uniqueArr.push(obj);
+    for (let i = 0; i < arr.length; i++ ) {
+        const key = JSON.stringify(arr[i]);
+        if (!seen.includes(key)) {
+            seen.push(key);
+            uniqueArr.push(arr[i]);
         }
     }
     return uniqueArr;
