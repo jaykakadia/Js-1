@@ -3,19 +3,19 @@
 // Sample Input: [ -3, 8, 7, 6, 5, -4, 3, 2, 1];
 // Expected Output: [ -4, -3, 1, 2, 3, 5, 6, 7, 8]
 
-let arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+const arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
 function mergesort(arr1){
     if (arr1.length <= 1){
         return arr1
     }
     
-    let mid = Math.floor(arr1.length/2);
-    let left = arr1.slice(0, mid);
-    let right = arr1.slice(mid);
+    const mid = Math.floor(arr1.length/2);
+    const left = arr1.slice(0, mid);
+    const right = arr1.slice(mid);
     return merge(mergesort(left), mergesort(right))
 }
 function merge(left, right){
-    let result = [];
+    const result = [];
     let i = 0;
     let j = 0;
     while (i < left.length && j < right.length){

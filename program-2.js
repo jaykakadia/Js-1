@@ -28,11 +28,11 @@ let input2 = [1, [2, [3, [4, [5, [6, 7]]]]]];
 // }
 
 function flatArray(arr) {
-  let result = [];
+  const result = [];
 
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
-      let temp = flatArray(arr[i]);
+      const temp = flatArray(arr[i]);
       for (let j = 0; j < temp.length; j++) {
         result.push(temp[j]);
       }

@@ -6,7 +6,7 @@
 
 // Expected output: [1, 2, 3, 4, 5]
 function merge(arr1, arr2){
-    let newarr = []
+    const newarr = []
     for (let i = 0; i < arr1.length; i++){
         newarr.push(arr1[i]);
     }
@@ -17,6 +17,6 @@ function merge(arr1, arr2){
     return newarr;
 }
 
-let arr1 = [];
-let arr2 = [4, 2];
+const arr1 = [];
+const arr2 = [4, 2];
 console.log(merge(arr1, arr2));

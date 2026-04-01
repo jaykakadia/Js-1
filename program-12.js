@@ -6,11 +6,11 @@
 
 // Expected Output: c = [3, 10, 100]
 
-arr1 = [1,2,3];
-arr2 = [100, 2, 1, 10];
+const arr1 = [1,2,3];
+const arr2 = [100, 2, 1, 10];
 
 function difference(arr1, arr2) {
-  let diff = [];
+  const diff = [];
   for (let i = 0; i < arr1.length; i++) {
     if (!arr2.includes(arr1[i])) {
       diff.push(arr1[i]);

@@ -15,7 +15,7 @@
 //  { title: 'Python', author: 'Guido' }
 // ]
 
-let arr = [
+const arr = [
   { title: "C++", author: "Bjarne" },
   { title: "Java", author: "James" },
   { title: "Python", author: "Guido" },

@@ -6,11 +6,11 @@
 
 // Expected Output: [4, 5, 8, 10, 12, 13]
 
-arr1 = [1, 0, 2, 3, 4];
-arr2 = [3, 5, 6, 7, 8, 13];
+const arr1 = [1, 0, 2, 3, 4];
+const arr2 = [3, 5, 6, 7, 8, 13];
 
 function add(arr1 , arr2){
-    ans = [];
+    const ans = [];
     for (let i = 0 ; i < arr1.length && i < arr2.length; i++){
         ans.push(arr1[i]+arr2[i]);
     }

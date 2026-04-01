@@ -12,8 +12,8 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 // Input: flowerbed = [1,0,0,0,1], n = 2
 // Output: false
 
-let arr=[0,1,0,0,0,1];
-let n=1;
+const arr=[0,1,0,0,0,1];
+const n=1;
 console.log(canPlaceFlowers(arr, n));
 
 function canPlaceFlowers(arr, n) {

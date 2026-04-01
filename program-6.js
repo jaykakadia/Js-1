@@ -9,7 +9,7 @@
 arr1 = [1, 7, 2, 3, 4, 5, 6];
 arr2 = [3, 4, 5, 7, 8, 6, 1];
 function merge(arr1, arr2) {
-  let newarr = [];
+  const newarr = [];
   for (let i = 0; i < arr1.length; i++) {
     if (!newarr.includes(arr1[i])) {
       newarr.push(arr1[i]);
